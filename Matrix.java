@@ -7,9 +7,8 @@ public class Matrix{
         return m[0][0] * (m[1][1] * m[2][2] - m[2][1] * m[1][2]) - m[0][1] * (m[1][0] * m[2][2] - m[2][0] * m[1][2]) + m[0][2] * (m[1][0] * m[2][1] - m[2][0] * m[1][1]);
 
     }
-    public static void main(String[] args) {
-
-        System.out.println("=======================Matrices=======================");
+    public static void cramers(){
+        System.out.println("=================Matrices=================");
         System.out.println("Enter the number of rows in matrix :");
         int row = mat.nextInt();
 
@@ -22,7 +21,7 @@ public class Matrix{
                 m[i][j] = mat.nextDouble();
             }
         }
-        System.out.println("======================================================");
+        System.out.println("==============================");
         System.out.println("Matrix of Array :");
 
         for (int i = 0; i < row; i++) {
@@ -32,7 +31,7 @@ public class Matrix{
             }
             System.out.println(" ");
         }
-        System.out.println("======================================================");
+        System.out.println("==============================");
         System.out.println("Index of array elements:");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
@@ -40,7 +39,6 @@ public class Matrix{
             }
             System.out.println();
         }
-
         double detA = det(m);
         if (detA == 0) {
             System.out.println("No unique solution exits (det(Matrix) = 0");
@@ -79,7 +77,7 @@ public class Matrix{
         double dz = det(Dz);
         System.out.println("Dz :" + dz);
         System.out.println();
-
+        //System.out.println("======================================================");
         double x= dx/detA;
         System.out.println("------------ Finding X ------------");
         System.out.println("x:");
@@ -99,6 +97,10 @@ public class Matrix{
         System.out.printf("z :%.2f",z);
         System.out.println();
     }
+    public static void main(String[] args) {
+
+        cramers();
+  }
 }
 /*## Sample Output
 
@@ -169,3 +171,4 @@ y :10.00
 z:
 -5.0/1.0
 z :-5.00*/
+
