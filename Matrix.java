@@ -9,7 +9,7 @@ public class Matrix{
     }
     public static void main(String[] args) {
 
-        System.out.println("=================Matrices=================");
+        System.out.println("=======================Matrices=======================");
         System.out.println("Enter the number of rows in matrix :");
         int row = mat.nextInt();
 
@@ -22,7 +22,7 @@ public class Matrix{
                 m[i][j] = mat.nextDouble();
             }
         }
-        System.out.println("==============================");
+        System.out.println("======================================================");
         System.out.println("Matrix of Array :");
 
         for (int i = 0; i < row; i++) {
@@ -32,7 +32,7 @@ public class Matrix{
             }
             System.out.println(" ");
         }
-        System.out.println("==============================");
+        System.out.println("======================================================");
         System.out.println("Index of array elements:");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
@@ -79,7 +79,7 @@ public class Matrix{
         double dz = det(Dz);
         System.out.println("Dz :" + dz);
         System.out.println();
-        //System.out.println("======================================================");
+
         double x= dx/detA;
         System.out.println("------------ Finding X ------------");
         System.out.println("x:");
@@ -100,3 +100,72 @@ public class Matrix{
         System.out.println();
     }
 }
+/*## Sample Output
+
+```
+=======================Matrices=======================
+Enter the number of rows in matrix :
+3
+Enter the number of columns in Matrix :
+3
+Enter The Elements :
+1 2 3
+4 5 6
+7 8 9
+======================================================
+Matrix of Array :
+1.0 2.0 3.0  
+4.0 5.0 6.0  
+7.0 8.0 9.0  
+======================================================
+Index of array elements:
+[0][0] [0][1] [0][2] 
+[1][0] [1][1] [1][2] 
+[2][0] [2][1] [2][2] 
+No unique solution exits (det(Matrix) = 0
+```
+*/
+/*=======================Matrices=======================
+Enter the number of rows in matrix :
+3
+Enter the number of columns in Matrix :
+3
+Enter The Elements :
+1 2 1
+3 5 1
+0 1 1
+======================================================
+Matrix of Array :
+1.0 2.0 1.0  
+3.0 5.0 1.0  
+0.0 1.0 1.0  
+======================================================
+Index of array elements:
+[0][0] [0][1] [0][2] 
+[1][0] [1][1] [1][2] 
+[2][0] [2][1] [2][2] 
+======================================================
+Determinant Of matrix is : 1.00
+======================================================
+To find Dx, Dy, & Dz Enter Constants Of the Matrix :
+1
+3
+5
+Dx :-14.0
+
+Dy :10.0
+
+Dz :-5.0
+
+------------ Finding X ------------
+x:
+-14.0/1.0
+x : -14.00
+------------ Finding Y ------------
+y:
+10.0/1.0
+y :10.00
+------------ Finding Z ------------
+z:
+-5.0/1.0
+z :-5.00*/
