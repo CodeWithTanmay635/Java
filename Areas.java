@@ -47,7 +47,8 @@ class Areas {
                     s.a_o_tr();
 
                     break;
-
+                 default:
+                    System.out.println("Invalid choice! Please select a valid option.");
 
 
             }
@@ -66,7 +67,6 @@ class Areas {
         System.out.println("4. Triangle");
         System.out.println("5. Parallelogram");
         System.out.println("6. Trapezium");
-        System.out.println("7. Compare All Shapes (Demo)");
         System.out.println("0. Exit");
         System.out.print("\nEnter your choice: ");
     }
@@ -257,3 +257,4 @@ abstract class Parallel implements par{
     public double base(){return b;}
     public double height(){return h;}
 }
+
