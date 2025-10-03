@@ -1,4 +1,4 @@
-import javax.xml.namespace.QName;
+
 import java.util.*;
 class items{
     private final Scanner bill = new Scanner(System.in);
